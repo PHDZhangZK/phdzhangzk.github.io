@@ -84,17 +84,17 @@ body.system-light .theme-icon:hover{
 } */
 
 /* 保持按钮在激活状态下不变色 */
-body.system-light .theme-icon:focus,
-body.system-light .theme-icon:active,
-body.light-mode .theme-icon:focus,
-body.light-mode .theme-icon:active {
+body.system-light .theme-icon,
+body.system-light .navbar a,
+body.light-mode .theme-icon,
+body.light-mode .navbar a {
     color: #000000; 
 }
 
-body.system-dark .theme-icon:focus,
-body.system-dark .theme-icon:active,
-body.light-dark .theme-icon:focus,
-body.light-dark .theme-icon:active {
+body.system-dark .theme-icon,
+body.system-dark .navbar a,
+body.light-dark .theme-icon,
+body.light-dark .navbar a {
     color: #ffffff; 
 }
 
