@@ -84,9 +84,18 @@ body.system-light .theme-icon:hover{
 } */
 
 /* 保持按钮在激活状态下不变色 */
-.theme-icon:focus,
-.theme-icon:active {
-    color: inherit; 
+body.system-light .theme-icon:focus,
+body.system-light .theme-icon:active,
+body.light-mode .theme-icon:focus,
+body.light-mode .theme-icon:active {
+    color: #ffffff; 
+}
+
+body.system-dark .theme-icon:focus,
+body.system-dark .theme-icon:active,
+body.light-dark .theme-icon:focus,
+body.light-dark .theme-icon:active {
+    color: #000000; 
 }
 
 .navbar .right-align {
