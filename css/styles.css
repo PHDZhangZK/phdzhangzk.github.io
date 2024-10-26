@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 */
+/* background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 */ 
     display: flex;
     justify-content: space-between;
     align-items: center;
