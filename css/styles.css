@@ -35,6 +35,11 @@ body {
     text-decoration: underline;
 }
 
+.navbar .right-align {
+    margin-left: auto;
+    padding-right: 20px; /* 与正文相同的右边距 */
+}
+
 .theme-icon {
     background: none;
     border: none;
