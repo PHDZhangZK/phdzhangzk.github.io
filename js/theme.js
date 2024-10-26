@@ -38,13 +38,15 @@ function setTheme(mode) {
 
     if (mode === 'dark') {
         document.body.classList.add('dark-mode');
+        removeSystemListener(); // 移除系统主题监听
     } else if (mode === 'light') {
         document.body.classList.add('light-mode');
+        removeSystemListener(); // 移除系统主题监听
     } else {
         // 如果是系统跟随，根据系统的当前主题添加不同的类
         applySystemTheme();
         // 监听系统主题变化
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', () => {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e) => {
             if (theme === 'system') {
                 applySystemTheme();
             }
@@ -61,4 +63,18 @@ function applySystemTheme() {
     } else {
         document.body.classList.add('system-light');
     }
+}
+
+// 添加系统主题变化监听器
+function addSystemListener() {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e) => {
+        if (theme === 'system') {
+            applySystemTheme();
+        }
+    });
+}
+
+// 移除系统主题变化监听器
+function removeSystemListener() {
+    window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', applySystemTheme);
 }
