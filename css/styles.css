@@ -70,10 +70,10 @@ body.light-mode .navbar a:hover {
 }
 
 /* 保持按钮在激活状态下不变色 */
-.theme-icon:focus,
+/* .theme-icon:focus,
 .theme-icon:active {
-    color: inherit; /* 保持按钮的原始颜色不变 */
-}
+    color: inherit;
+} */
 
 .navbar .right-align {
     margin-left: auto;
