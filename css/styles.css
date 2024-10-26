@@ -31,7 +31,7 @@ body.dark-mode .navbar,
 body.system-dark .navbar {
     background-color: rgba(34, 34, 34, 0.2); /* 深色背景，半透明 */
     color: #fff;
-    border-bottom: 1px solid #fafafa; /* 增加一个浅色的底边框 */
+    border-bottom: 1px solid #eaeafa; /* 增加一个浅色的底边框 */
 }
 
 /* 浅色主题下的导航栏 */
@@ -42,12 +42,12 @@ body.system-light .navbar {
     border-bottom: 1px solid #eaeaea; /* 增加一个浅色的底边框 */
 }
 
-/* 导航栏链接样式 */
-.navbar a {
-    color: inherit; /* 继承导航栏的文字颜色 */
+ /* 导航栏链接样式 */
+/*.navbar a {
+    color: inherit; 
     margin: 0 15px;
     text-decoration: none;
-}
+} */
 
 /* 深色主题中的选中和悬停颜色 */
 body.dark-mode .navbar a.active,
@@ -124,8 +124,15 @@ body.system-light .navbar a:hover {
 }
 
 /* 正文中的链接样式 */
-.text-content a {
+body.dark-mode .text-content a ,
+body.system-dark .text-content a{
     color: #004E97; /* 设置正文链接的颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+/* 正文中的链接样式 */
+body.light-mode .text-content a ,
+body.system-light .text-content a{
+    color: #C8161E; /* 浅色主题使用红色 */
     text-decoration: none; /* 去掉下划线 */
 }
 
