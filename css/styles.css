@@ -12,29 +12,44 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* 默认导航栏样式 */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar a {
+/* 深色主题下的导航栏 */
+body.dark-mode .navbar {
+    background-color: rgba(34, 34, 34, 0.8); /* 深色背景，半透明 */
     color: #fff;
+}
+
+/* 浅色主题下的导航栏 */
+body.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.95); /* 浅色背景，白色半透明 */
+    color: #333;
+    border-bottom: 1px solid #eaeaea; /* 增加一个浅色的底边框 */
+}
+
+/* 导航栏链接样式 */
+.navbar a {
+    color: inherit; /* 继承导航栏的文字颜色 */
     margin: 0 15px;
-    text-decoration: none; /* 去掉导航栏中的下划线 */
+    text-decoration: none;
 }
 
 /* 深色主题中的选中和悬停颜色 */
-.navbar a.active,
-.navbar a:hover {
-    color: #004E97; /* 深色主题使用深蓝色 */
+body.dark-mode .navbar a.active,
+body.dark-mode .navbar a:hover {
+    color: #004E97; /* 深蓝色 */
 }
 
 /* 浅色主题中的选中和悬停颜色 */
@@ -46,13 +61,12 @@ body.light-mode .navbar a:hover {
 /* 按钮和链接样式 */
 .theme-icon,
 .navbar a {
-    color: #fff;
     transition: color 0.3s; /* 平滑过渡效果 */
 }
 
 /* 悬停时变色，但选中时不变色 */
 .theme-icon:hover {
-    color: #004E97; /* 悬停时显示为蓝色，适用于深色和浅色主题 */
+    color: #004E97; /* 悬停时显示为蓝色 */
 }
 
 /* 保持按钮在激活状态下不变色 */
@@ -66,15 +80,6 @@ body.light-mode .navbar a:hover {
     padding-right: 20px; /* 与正文相同的右边距 */
 }
 
-.theme-icon {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    font-size: 20px;
-    opacity: 1; /* 保持按钮完全不透明 */
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -83,6 +88,16 @@ body.light-mode .navbar a:hover {
     max-width: 1200px; /* 设置页面内容的最大宽度 */
     width: 100%; /* 使内容占满整个可用宽度 */
     margin: 0 auto; /* 自动设置左右边距 */
+}
+
+
+.theme-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    opacity: 1; /* 保持按钮完全不透明 */
 }
 
 .text-content {
