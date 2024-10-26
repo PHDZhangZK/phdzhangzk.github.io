@@ -35,18 +35,30 @@ themeToggle.addEventListener('click', () => {
 
 function setTheme(mode) {
     document.body.classList.remove('dark-mode', 'light-mode', 'system-mode', 'system-dark', 'system-light');
+
     if (mode === 'dark') {
         document.body.classList.add('dark-mode');
     } else if (mode === 'light') {
         document.body.classList.add('light-mode');
     } else {
         // 如果是系统跟随，根据系统的当前主题添加不同的类
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (prefersDarkScheme) {
-            document.body.classList.add('system-dark');
-        } else {
-            document.body.classList.add('system-light');
-        }
+        applySystemTheme();
+        // 监听系统主题变化
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', () => {
+            if (theme === 'system') {
+                applySystemTheme();
+            }
+        });
     }
     updateIcon();
+}
+
+// 检测并应用系统主题
+function applySystemTheme() {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefersDarkScheme) {
+        document.body.classList.add('system-dark');
+    } else {
+        document.body.classList.add('system-light');
+    }
 }
