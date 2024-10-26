@@ -84,10 +84,10 @@ body.system-light .theme-icon:hover{
 } */
 
 /* 保持按钮在激活状态下不变色 */
-/* .theme-icon:focus,
+.theme-icon:focus,
 .theme-icon:active {
     color: inherit; 
-} */
+}
 
 .navbar .right-align {
     margin-left: auto;
