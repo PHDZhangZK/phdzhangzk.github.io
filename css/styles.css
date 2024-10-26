@@ -53,7 +53,9 @@ body.system-light .navbar {
 body.dark-mode .navbar a.active,
 body.dark-mode .navbar a:hover,
 body.system-dark .navbar a.active,
-body.system-dark .navbar a:hover {
+body.system-dark .navbar a:hover,
+body.dark-mode .theme-icon:hover,
+body.system-dark .theme-icon:hover{
     color: #004E97; /* 深蓝色 */
 }
 
@@ -61,7 +63,9 @@ body.system-dark .navbar a:hover {
 body.light-mode .navbar a.active,
 body.light-mode .navbar a:hover,
 body.system-light .navbar a.active,
-body.system-light .navbar a:hover {
+body.system-light .navbar a:hover,
+body.light-mode .theme-icon:hover,
+body.system-light .theme-icon:hover{
     color: #C8161E; /* 浅色主题使用红色 */
 }
 
@@ -72,9 +76,9 @@ body.system-light .navbar a:hover {
 }
 
 /* 悬停时变色，但选中时不变色 */
-.theme-icon:hover {
-    color: #004E97; /* 悬停时显示为蓝色 */
-}
+/* .theme-icon:hover {
+    color: #004E97; 
+} */
 
 /* 保持按钮在激活状态下不变色 */
 .theme-icon:focus,
