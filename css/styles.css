@@ -58,6 +58,7 @@ body.system-dark .navbar a:hover,
 body.dark-mode .theme-icon:hover,
 body.system-dark .theme-icon:hover{
     color: #004E97; /* 深蓝色 */
+    text-decoration: none;
 }
 
 /* 浅色主题中的选中和悬停颜色 */
@@ -68,6 +69,7 @@ body.system-light .navbar a:hover,
 body.light-mode .theme-icon:hover,
 body.system-light .theme-icon:hover{
     color: #C8161E; /* 浅色主题使用红色 */
+    text-decoration: none;
 }
 
 /* 按钮和链接样式 */
@@ -82,10 +84,10 @@ body.system-light .theme-icon:hover{
 } */
 
 /* 保持按钮在激活状态下不变色 */
-.theme-icon:focus,
+/* .theme-icon:focus,
 .theme-icon:active {
-    color: inherit; /* 保持按钮的原始颜色不变 */
-}
+    color: inherit; 
+} */
 
 .navbar .right-align {
     margin-left: auto;
