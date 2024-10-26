@@ -44,11 +44,11 @@ body.system-light .navbar {
 }
 
  /* 导航栏链接样式 */
-/* .navbar a {
+.navbar a {
     color: inherit; 
     margin: 0 15px;
     text-decoration: none;
-} */
+}
 
 /* 深色主题中的选中和悬停颜色 */
 body.dark-mode .navbar a.active,
