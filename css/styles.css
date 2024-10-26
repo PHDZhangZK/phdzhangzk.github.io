@@ -78,7 +78,7 @@ body {
 
 /* 普通文本中的链接样式 */
 a {
-    color: #004E97;
+    color: #004E97; /* 设置链接文字颜色为 R:0, G:78, B:151 */
     text-decoration: none; /* 去掉下划线 */
 }
 
