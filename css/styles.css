@@ -105,3 +105,50 @@ body.system-light .navbar a:hover {
     width: 100%; /* 使内容占满整个可用宽度 */
     margin: 0 auto; /* 自动设置左右边距 */
 }
+
+.text-content {
+    max-width: 600px;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.image-content {
+    flex-shrink: 0;
+}
+
+.rounded-image {
+    border-radius: 10px;
+    width: 280px;
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 正文中的链接样式 */
+.text-content a {
+    color: #004E97; /* 设置正文链接的颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.text-content a:hover {
+    text-decoration: underline; /* 悬停时加下划线 */
+}
+
+/* 深色模式：纯黑背景 */
+body.dark-mode {
+    background-color: #000000; /* 设置为纯黑色 */
+    color: #ffffff; /* 文字颜色变为白色 */
+}
+
+@media (prefers-color-scheme: dark) {
+    body.system-mode {
+        background-color: #000000; /* 系统跟随下的深色模式 */
+        color: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body.system-mode {
+        background-color: #ffffff; /* 系统跟随下的浅色模式 */
+        color: #333;
+    }
+}
