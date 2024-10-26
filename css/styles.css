@@ -31,7 +31,7 @@ body.dark-mode .navbar,
 body.system-dark .navbar {
     background-color: rgba(34, 34, 34, 0.8); /* 深色背景，半透明 */
     color: #fff;
-    border-bottom: 1px solid #eaeafa; /* 增加一个浅色的底边框 */
+    border-bottom: 1px solid #1a1a1a; /* 增加一个浅色的底边框 */
 }
 
 /* 浅色主题下的导航栏 */
