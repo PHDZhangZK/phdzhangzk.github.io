@@ -16,7 +16,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 (0.8 表示 80% 不透明度) */
+    background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,11 +28,32 @@ body {
 .navbar a {
     color: #fff;
     margin: 0 15px;
-    text-decoration: none; /* 去掉下划线 */
+    text-decoration: none; /* 去掉导航栏中的下划线 */
 }
 
 .navbar a:hover {
     text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+/* 按钮和链接样式 */
+.theme-icon,
+.navbar a {
+    color: #fff;
+    transition: color 0.3s; /* 平滑过渡效果 */
+}
+
+/* 悬停时变为 #004E97 */
+.theme-icon:hover,
+.navbar a:hover {
+    color: #004E97;
+}
+
+/* 按钮选中时（聚焦或激活）显示为蓝色 */
+.theme-icon:focus,
+.theme-icon:active,
+.navbar a:focus,
+.navbar a:active {
+    color: blue;
 }
 
 .navbar .right-align {
@@ -45,7 +66,6 @@ body {
     border: none;
     cursor: pointer;
     outline: none;
-    color: #fff;
     font-size: 20px;
     opacity: 1; /* 保持按钮完全不透明 */
 }
@@ -71,8 +91,8 @@ body {
 }
 
 .rounded-image {
-    border-radius: 15px;
-    width: 200px;
+    border-radius: 10px;
+    width: 280px;
     height: auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
