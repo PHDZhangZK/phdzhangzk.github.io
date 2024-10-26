@@ -75,6 +75,7 @@ body.system-light .theme-icon:hover{
 /* 按钮和链接样式 */
 .theme-icon,
 .navbar a {
+    color:#fff;
     transition: color 0.3s; /* 平滑过渡效果 */
 }
 
