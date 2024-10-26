@@ -11,6 +11,7 @@ function updateIcon() {
         themeIcon.className = 'fas fa-adjust'; // 系统跟随图标
     }
 }
+
 // 检查 localStorage 中是否存有用户选择的主题
 if (localStorage.getItem('theme')) {
     theme = localStorage.getItem('theme');
@@ -27,7 +28,6 @@ themeToggle.addEventListener('click', () => {
     } else {
         theme = 'dark';
     }
-
     // 保存到 localStorage 中
     localStorage.setItem('theme', theme);
     setTheme(theme);
@@ -35,7 +35,6 @@ themeToggle.addEventListener('click', () => {
 
 function setTheme(mode) {
     document.body.classList.remove('dark-mode', 'light-mode', 'system-mode', 'system-dark', 'system-light');
-
     if (mode === 'dark') {
         document.body.classList.add('dark-mode');
     } else if (mode === 'light') {
