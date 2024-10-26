@@ -158,7 +158,10 @@ body.system-dark{
     background-color: #000000; /* 设置为纯黑色 */
     color: #ffffff; /* 文字颜色变为白色 */
 }
-
+body.system-light{
+    background-color: #ffffff; /* 系统跟随下的浅色模式 */
+        color: #333;
+}
 @media (prefers-color-scheme: dark) {
     body.system-dark {
         background-color: #000000; /* 系统跟随下的深色模式 */
