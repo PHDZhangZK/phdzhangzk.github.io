@@ -29,14 +29,15 @@ body {
 /* 深色主题下的导航栏 */
 body.dark-mode .navbar, 
 body.system-dark .navbar {
-    background-color: rgba(34, 34, 34, 0.8); /* 深色背景，半透明 */
+    background-color: rgba(34, 34, 34, 0.2); /* 深色背景，半透明 */
     color: #fff;
+    border-bottom: 1px solid #fafafa; /* 增加一个浅色的底边框 */
 }
 
 /* 浅色主题下的导航栏 */
 body.light-mode .navbar, 
 body.system-light .navbar {
-    background-color: rgba(255, 255, 255, 0.95); /* 浅色背景，白色半透明 */
+    background-color: rgba(255, 255, 255, 0.2); /* 浅色背景，白色半透明 */
     color: #333;
     border-bottom: 1px solid #eaeaea; /* 增加一个浅色的底边框 */
 }
