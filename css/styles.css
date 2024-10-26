@@ -159,14 +159,14 @@ body.dark-mode {
 }
 
 @media (prefers-color-scheme: dark) {
-    body.system-mode {
+    body.system-dark {
         background-color: #000000; /* 系统跟随下的深色模式 */
         color: #ffffff;
     }
 }
 
 @media (prefers-color-scheme: light) {
-    body.system-mode {
+    body.system-light {
         background-color: #ffffff; /* 系统跟随下的浅色模式 */
         color: #333;
     }
