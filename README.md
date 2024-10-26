@@ -4,7 +4,7 @@
 
 <img src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" alt="jpg"  width="280px" style="border-radius: 15px;">
 
-<img align="right" alt="Description" width="280px" alt="jpg" style="border-radius: 15px; display: block;" src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" />
+<img align="right" width="280px" alt="jpg" src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" />
 
 <img src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" alt="jpg" style="border-radius: 15px;">
 
