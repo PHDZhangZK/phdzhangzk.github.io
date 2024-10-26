@@ -30,6 +30,9 @@ body {
     margin: 0 15px;
     text-decoration: none; /* 去掉导航栏中的下划线 */
 }
+.navbar a.active {
+    color: #004E97; /* 选中状态为深蓝色 */
+}
 
 .navbar a:hover {
     color: #004E97;
@@ -53,7 +56,7 @@ body {
 .theme-icon:active,
 .navbar a:focus,
 .navbar a:active {
-    color: blue;
+    color: #004E97;
 }
 
 .navbar .right-align {
