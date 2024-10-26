@@ -34,7 +34,7 @@ themeToggle.addEventListener('click', () => {
 });
 
 function setTheme(mode) {
-    document.body.classList.remove('dark-mode', 'light-mode', 'system-mode', 'system-dark', 'system-light');
+    document.body.classList.remove('dark-mode', 'light-mode', 'system-dark', 'system-light');
 
     if (mode === 'dark') {
         document.body.classList.add('dark-mode');
@@ -45,12 +45,7 @@ function setTheme(mode) {
     } else {
         // 如果是系统跟随，根据系统的当前主题添加不同的类
         applySystemTheme();
-        // 监听系统主题变化
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e) => {
-            if (theme === 'system') {
-                applySystemTheme();
-            }
-        });
+        addSystemListener();
     }
     updateIcon();
 }
@@ -58,6 +53,7 @@ function setTheme(mode) {
 // 检测并应用系统主题
 function applySystemTheme() {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.body.classList.remove('system-dark', 'system-light');
     if (prefersDarkScheme) {
         document.body.classList.add('system-dark');
     } else {
@@ -65,16 +61,20 @@ function applySystemTheme() {
     }
 }
 
-// 添加系统主题变化监听器
+// 监听系统主题变化
 function addSystemListener() {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (e) => {
-        if (theme === 'system') {
-            applySystemTheme();
-        }
-    });
+    removeSystemListener(); // 先确保没有旧的监听器
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', systemThemeChange);
 }
 
 // 移除系统主题变化监听器
 function removeSystemListener() {
-    window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', applySystemTheme);
+    window.matchMedia("(prefers-color-scheme: dark)").removeEventListener('change', systemThemeChange);
+}
+
+// 响应系统主题变化
+function systemThemeChange() {
+    if (theme === 'system') {
+        applySystemTheme();
+    }
 }
