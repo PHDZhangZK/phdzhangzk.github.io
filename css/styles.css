@@ -1,0 +1,6 @@
+.rounded-image {
+    border-radius: 15px; /* 调整数值控制圆角的程度 */
+    width: 200px; /* 调整图片宽度 */
+    height: auto; /* 保持宽高比 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
