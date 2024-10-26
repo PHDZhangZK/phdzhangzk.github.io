@@ -25,17 +25,25 @@ body {
     z-index: 1000;
 }
 
+/* 全局链接颜色 */
 .navbar a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none; /* 去掉导航栏中的下划线 */
 }
-.navbar a.active {
-    color: #004E97; /* 选中状态为深蓝色 */
+
+/* 深色主题中的选中和悬停颜色 */
+.navbar a.active,
+.navbar a:hover,
+.theme-icon:hover {
+    color: #004E97; /* 深色主题使用深蓝色 */
 }
 
-.navbar a:hover {
-    color: #004E97;
+/* 浅色主题中的选中和悬停颜色 */
+body.light-mode .navbar a.active,
+body.light-mode .navbar a:hover,
+body.light-mode .theme-icon:hover {
+    color: #C8161E; /* 浅色主题使用红色 */
 }
 
 /* 按钮和链接样式 */
@@ -45,19 +53,18 @@ body {
     transition: color 0.3s; /* 平滑过渡效果 */
 }
 
-/* 悬停时变为 #004E97 */
-.theme-icon:hover,
-.navbar a:hover {
-    color: #004E97;
+/* 默认主题按钮在不同主题下的颜色 */
+body.dark-mode .navbar a,
+body.dark-mode .theme-icon {
+    color: #004E97; /* 深色主题为深蓝色 */
 }
 
-/* 按钮选中时（聚焦或激活）显示为蓝色 */
-.theme-icon:focus,
-.theme-icon:active,
-.navbar a:focus,
-.navbar a:active {
-    color: #004E97;
+body.light-mode .navbar a,
+body.light-mode .theme-icon {
+    color: #C8161E; /* 浅色主题为红色 */
 }
+
+
 
 .navbar .right-align {
     margin-left: auto;
