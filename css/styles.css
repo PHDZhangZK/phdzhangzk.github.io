@@ -28,11 +28,11 @@ body {
 .navbar a {
     color: #fff;
     margin: 0 15px;
-    text-decoration: none;
+    text-decoration: none; /* 去掉下划线 */
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* 悬停时显示下划线 */
 }
 
 .navbar .right-align {
@@ -75,6 +75,7 @@ body {
     height: auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* 普通文本中的链接样式 */
 a {
     color: #007acc;
