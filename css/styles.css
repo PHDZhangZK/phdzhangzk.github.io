@@ -1,7 +1,7 @@
 body {
     background-color: #ffffff; /* 默认浅色模式为纯白色 */
     color: #333;
-    font-family: Arial, sans-serif, "DengXian", "Microsoft YaHei";
+    font-family: Arial, sans-serif, "DengXian", "Microsoft YaHei"; /* 优先使用等线字体 */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -25,7 +25,6 @@ body {
     z-index: 1000;
 }
 
-/* 全局链接颜色 */
 .navbar a {
     color: #fff;
     margin: 0 15px;
@@ -34,15 +33,13 @@ body {
 
 /* 深色主题中的选中和悬停颜色 */
 .navbar a.active,
-.navbar a:hover,
-.theme-icon:hover {
+.navbar a:hover {
     color: #004E97; /* 深色主题使用深蓝色 */
 }
 
 /* 浅色主题中的选中和悬停颜色 */
 body.light-mode .navbar a.active,
-body.light-mode .navbar a:hover,
-body.light-mode .theme-icon:hover {
+body.light-mode .navbar a:hover {
     color: #C8161E; /* 浅色主题使用红色 */
 }
 
@@ -53,18 +50,16 @@ body.light-mode .theme-icon:hover {
     transition: color 0.3s; /* 平滑过渡效果 */
 }
 
-/* 默认主题按钮在不同主题下的颜色 */
-body.dark-mode .navbar a,
-body.dark-mode .theme-icon {
-    color: #004E97; /* 深色主题为深蓝色 */
+/* 悬停时变色，但选中时不变色 */
+.theme-icon:hover {
+    color: #004E97; /* 悬停时显示为蓝色，适用于深色和浅色主题 */
 }
 
-body.light-mode .navbar a,
-body.light-mode .theme-icon {
-    color: #C8161E; /* 浅色主题为红色 */
+/* 保持按钮在激活状态下不变色 */
+.theme-icon:focus,
+.theme-icon:active {
+    color: inherit; /* 保持按钮的原始颜色不变 */
 }
-
-
 
 .navbar .right-align {
     margin-left: auto;
