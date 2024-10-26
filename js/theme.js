@@ -1,6 +1,16 @@
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
 let theme = 'system'; // 默认跟随系统主题
 
+function updateIcon() {
+    if (theme === 'dark') {
+        themeIcon.className = 'fas fa-moon'; // 月亮图标
+    } else if (theme === 'light') {
+        themeIcon.className = 'fas fa-sun'; // 太阳图标
+    } else {
+        themeIcon.className = 'fas fa-adjust'; // 系统跟随图标
+    }
+}
 // 检查 localStorage 中是否存有用户选择的主题
 if (localStorage.getItem('theme')) {
     theme = localStorage.getItem('theme');
@@ -39,4 +49,5 @@ function setTheme(mode) {
             document.body.classList.add('system-light');
         }
     }
+    updateIcon();
 }
