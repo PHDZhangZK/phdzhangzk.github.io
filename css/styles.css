@@ -88,14 +88,14 @@ body.system-light .theme-icon:focus,
 body.system-light .theme-icon:active,
 body.light-mode .theme-icon:focus,
 body.light-mode .theme-icon:active {
-    color: #ffffff; 
+    color: #000000; 
 }
 
 body.system-dark .theme-icon:focus,
 body.system-dark .theme-icon:active,
 body.light-dark .theme-icon:focus,
 body.light-dark .theme-icon:active {
-    color: #000000; 
+    color: #ffffff; 
 }
 
 .navbar .right-align {
