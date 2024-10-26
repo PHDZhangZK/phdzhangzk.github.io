@@ -1,23 +1,13 @@
-# Zhang Zhankun
-<a href="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggrqy7om28j30j80omjtq.jpg">
-  <img align="left" alt="Wechat" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/wechat.svg" />
-</a>
-<a href="https://www.linkedin.com/in/%E7%A1%95-%E5%88%98-073728144/">
-  <img align="left" alt="LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/linkedin.svg" />
-</a>
-<a href="#">
-  <img align="left" alt="'Gmail" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/gmail.svg" />
-</a>
-<a href="https://leetcode.com/lovelybuggies/">
-  <img align="left" alt="LeetCode" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/leetcode.svg" />
-</a>
-<a href="https://www.kaggle.com/ninolau">
-  <img align="left" alt="Kaggle" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/kaggle.svg" />
-</a>
+# Zhankun Zhang (张占坤)
 
-<br />
-<br />
-<img align="right" alt="jpg" src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif" />
+[Xi'an Jiaotong University](https://www.xjtu.edu.cn/)
+
+<img src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" alt="Description"  width="280px" style="border-radius: 15px;">
+
+<img align="right" alt="Description" width="280px" alt="Description" style="border-radius: 15px; display: block;" src="https://github.com/PHDZhangZK/phdzhangzk.github.io/blob/main/me.jpg" />
+
+Hi, I’m currently a first-year PhD student in the [College of Computer Science and Technology](http://www.cs.xjtu.edu.cn/) at [Xi'an Jiaotong University (XJTU)](https://www.xjtu.edu.cn/), and expected to get the PhD degree in 2028.I’m co-advised by [Prof. Weiguo Wu (伍卫国)](https://gr.xjtu.edu.cn/web/wgwu) and [Academician Depei Qian (钱徳沛)](https://www.buaa.edu.cn/bh2024/info/1028/1595.htm).Prior to that, I received my B.E. degree from the [School of Cyber Science and Engineering](http://softschool.zzu.edu.cn/) in [Zhengzhou University (ZZU)](https://www.zzu.edu.cn/), Zhengzhou, 2022.
+
+My research interests mainly focus on IoT Systems & Security, Edge Computing, and Deduplication/Incremental Updates.
 
 ![Visitor Count](https://profile-counter.glitch.me/PHDZhangZK/count.svg)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Christmas&layout=compact)](https://github.com/PHDZhangZK/github-readme-stats)
