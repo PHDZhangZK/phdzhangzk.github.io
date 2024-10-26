@@ -77,13 +77,13 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 普通文本中的链接样式 */
-a {
-    color: #004E97; /* 设置链接文字颜色为 R:0, G:78, B:151 */
+/* 正文中的链接样式 */
+.text-content a {
+    color: #004E97; /* 设置正文链接的颜色 */
     text-decoration: none; /* 去掉下划线 */
 }
 
-a:hover {
+.text-content a:hover {
     text-decoration: underline; /* 悬停时加下划线 */
 }
 
