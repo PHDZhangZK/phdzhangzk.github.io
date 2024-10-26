@@ -32,7 +32,7 @@ body {
 }
 
 .navbar a:hover {
-    text-decoration: underline; /* 悬停时显示下划线 */
+    color: #004E97;
 }
 
 /* 按钮和链接样式 */
