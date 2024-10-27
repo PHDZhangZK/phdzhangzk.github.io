@@ -16,8 +16,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-/* background-color: rgba(34, 34, 34, 0.8); /* 半透明背景颜色 */ 
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,10 +77,6 @@ body.system-light .theme-icon:hover{
     transition: color 0.3s; /* 平滑过渡效果 */
 }
 
-/* 悬停时变色，但选中时不变色 */
-/* .theme-icon:hover {
-    color: #004E97; 
-} */
 
 /* 保持按钮在激活状态下不变色 */
 body.system-light .theme-icon,
@@ -108,20 +103,29 @@ body.light-dark .theme-icon{
     opacity: 1; /* 保持按钮完全不透明 */
 }
 
+
+
+/* 让容器中的文本和图片并排显示 */
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    max-width: 1200px; /* 设置页面内容的最大宽度 */
+    justify-content: space-between;
+    padding: 10px; /* 统一的内边距 */
+    max-width: 800px; /* 设置页面内容的最大宽度 */
     width: 100%; /* 使内容占满整个可用宽度 */
-    margin: 0 auto; /* 自动设置左右边距 */
+    margin: 0 auto; /* 居中对齐 */
+}
+/* 让主要内容部分与 .container 保持对齐 */
+.main-context {
+    max-width: 800px; /* 与 .container 一致 */
+    width: 100%; /* 占满容器宽度 */
+    padding: 0px; /* 统一的内边距 */
+    margin: 0 auto; /* 居中对齐 */
 }
 
 .text-content {
-    max-width: 600px;
-    margin-right: 20px;
     flex: 1;
+    margin-right: 20px; /* 确保文本和图片之间有间距 */
 }
 
 .image-content {
@@ -130,26 +134,44 @@ body.light-dark .theme-icon{
 
 .rounded-image {
     border-radius: 10px;
-    width: 280px;
+    width: 200px; /* 固定图片宽度 */
     height: auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* 让footer和文本都居中 */
+.footer {
+    text-align: center;
+    padding: 10px;
 }
 
 /* 正文中的链接样式 */
 body.dark-mode .text-content a ,
-body.system-dark .text-content a{
+body.system-dark .text-content a,
+body.dark-mode .publication-entry a,
+body.system-dark .publication-entry a{
     color: #004E97; /* 设置正文链接的颜色 */
     text-decoration: none; /* 去掉下划线 */
 }
 /* 正文中的链接样式 */
 body.light-mode .text-content a ,
-body.system-light .text-content a{
+body.system-light .text-content a,
+body.light-mode .publication-entry a,
+body.system-light .publication-entry a {
     color: #C8161E; /* 浅色主题使用红色 */
     text-decoration: none; /* 去掉下划线 */
 }
+body.light-mode .research-overview a ,
+body.system-light .research-overview a,
+body.dark-mode .research-overview a ,
+body.system-dark .research-overview a {
+    color: #9A2C21; /* 浅色主题使用红色 */
+    text-decoration: none; /* 去掉下划线 */
+}
 
-.text-content a:hover {
-    text-decoration: underline; /* 悬停时加下划线 */
+.text-content a:hover,
+.main-context a:hover,
+.research-overview a:hover {
+    text-decoration: underline !important; /* 悬停时加下划线 */
 }
 
 /* 深色模式：纯黑背景 */
@@ -158,10 +180,11 @@ body.system-dark{
     background-color: #000000; /* 设置为纯黑色 */
     color: #ffffff; /* 文字颜色变为白色 */
 }
-/* body.system-light{
+body.light-mode,
+body.system-light{
     background-color: #ffffff; 
         color: #333;
-} */
+}
 @media (prefers-color-scheme: dark) {
     body.system-dark {
         background-color: #000000; /* 系统跟随下的深色模式 */
@@ -175,3 +198,168 @@ body.system-dark{
         color: #333;
     }
 }
+
+.research-overview ul {
+    list-style-type: disc; /* 使用圆点作为列表符号 */
+    padding-left: 20px; /* 增加缩进 */
+}
+
+.research-overview ul ul {
+    list-style-type: circle; /* 使用小圆圈作为子列表符号 */
+    padding-left: 20px; /* 增加子列表的缩进 */
+}
+
+.research-overview li {
+    margin-bottom: 5px; /* 调整每个列表项之间的间距 */
+}
+
+
+.animated-emoji {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.h3-size {
+    font-size: 1.17em; /* 或者设置为和 h3 一样的具体大小，例如 18px */
+    font-weight: normal; /* 确保不加粗 */
+}
+.h1-size {
+    font-size: 40px; /* 或者设置为和 h1 一样的具体大小，例如 32px */
+    font-weight: normal; /* 确保不加粗 */
+}
+.news-size {
+    font-size: 32px; /* 或者设置为和 h3 一样的具体大小，例如 18px */
+    font-weight: normal; /* 确保不加粗 */
+}
+.hanging-indent {
+    text-indent: 20px; /* 第一行向左缩进 20px */
+}
+
+.publication-tags {
+    display: flex;
+    flex-direction: column; /* 纵向排列 */
+    gap: 8px; /* 控制小牌之间的垂直间距 */
+}
+.publication-entry {
+    display: flex; /* 使用 flex 布局让元素在同一行 */
+    flex-wrap: wrap; /* 允许换行 */
+    align-items: flex-start; /* 垂直居中对齐 */
+    gap: 80px; /* 标签和文本之间的间距 */
+}
+/* 使文本和小牌在同一行 */
+.publication-entry p {
+    margin: 0; /* 去除默认的段落间距 */
+    flex: 1; /* 让文本占用剩余空间 */
+    display: inline; /* 确保与小牌在同一行 */
+}
+.tag {
+    display: inline-block;
+    padding: 4px 8px; /* 内边距，控制小牌大小 */
+    background-color: #981408; /* 默认黄色背景，可以根据需要修改 */
+    color: #fff; /* 字体颜色 */
+    font-size: 0.85em; /* 控制字体大小 */
+    font-weight: bold;
+    border-radius: 5px; /* 圆角 */
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    width: fit-content; /* 根据内容自动调整宽度 */
+}
+.tag0 {
+    display: inline-block;
+    padding: 4px 8px; /* 内边距，控制小牌大小 */
+    background-color: #981408; /* 默认黄色背景，可以根据需要修改 */
+    color: #fff; /* 字体颜色 */
+    font-size: 0.85em; /* 控制字体大小 */
+    font-weight: bold;
+    border-radius: 5px; /* 圆角 */
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    width: fit-content; /* 根据内容自动调整宽度 */
+}
+/* 不同颜色的标签 */
+body.system-light .tag,
+body.light-mode .tag{
+    background-color: #bc7579; /* 红色 */
+}
+
+body.system-dark .tag,
+body.dark-mode .tag {
+    background-color: #3981c5; /* 蓝色 */
+}
+
+body.system-light .dotted-underline,
+body.light-mode .dotted-underline {
+    color: #C8161E; /* 浅色主题使用红色 */
+}
+
+body.system-dark .dotted-underline,
+body.dark-mode .dotted-underline {
+    color: #004E97; /* 浅色主题使用红色 */
+}
+.underline {
+    text-decoration: underline; /* 普通下划线 */
+    text-underline-offset: 10px; /* 增加下划线与文本的间距 */
+}
+.dotted-underline {
+    text-decoration: underline;
+    text-decoration-style: dashed; /* 虚线样式 */
+    text-decoration-thickness: 1px; /* 控制下划线的粗细 */
+    text-decoration-color: currentColor !important; /* 使用文本的当前颜色 */
+    text-underline-offset: 10px; /* 增加下划线与文本的间距 */
+}
+
+
+.buttons {
+    display: flex;
+    gap: 10px; /* 按钮之间的间距 */
+    margin-top: 10px;
+    margin-left: 160px; /* 调整按钮组距离左侧边框的距离 */
+}
+
+.buttons a:hover {
+    text-decoration: none !important;
+}
+.btn {
+    background-color: #f5f5f5;
+    border: 1px solid #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.system-dark .btn:hover,
+body.dark-mode .btn:hover {
+    background-color: #3981c5; /* 悬停时改变背景颜色 */
+}
+body.system-light .btn:hover,
+body.light-mode .btn:hover {
+    background-color: #bc7579; /* 悬停时改变背景颜色 */
+}
+.abstract-content {
+    display: none; /* 默认隐藏摘要内容 */
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px dashed #999;
+    background-color: transparent;
+    margin-left: 160px; /* 调整按钮组距离左侧边框的距离 */
+    text-align: justify; /* 两边对齐文本 */
+}
+

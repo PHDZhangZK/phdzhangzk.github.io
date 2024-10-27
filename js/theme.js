@@ -78,3 +78,12 @@ function systemThemeChange() {
         applySystemTheme();
     }
 }
+
+function toggleAbstract() {
+    const abstract = document.getElementById("abstract");
+    if (abstract.style.display === "none" || abstract.style.display === "") {
+        abstract.style.display = "block"; // 展开摘要
+    } else {
+        abstract.style.display = "none"; // 收起摘要
+    }
+}
